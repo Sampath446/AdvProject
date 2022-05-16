@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/services/users.service';
+import { Router } from '@angular/router';
 import { RegUser } from '../models/RegistrationModel';
 
 @Component({
@@ -9,7 +10,7 @@ import { RegUser } from '../models/RegistrationModel';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,private router: Router) { }
   name:string='';
   username:string='';
   password:string='';
@@ -30,4 +31,9 @@ export class RegisterComponent implements OnInit {
 
   }
 
+  reloadPage() {
+    window.location.reload();
+ }
+ login(){this.router.navigate(['/login']);
+ }
 }

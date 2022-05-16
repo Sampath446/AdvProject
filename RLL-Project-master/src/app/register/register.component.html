@@ -15,7 +15,7 @@
         <div class="txt_field">
           <!-- <input type="text" [(ngModel)]="name"  required> -->
           
-          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"/>
+          <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" required>
           <span></span>
           <label>Name</label>
         </div>
@@ -90,11 +90,11 @@ span.psw {
   }
 }
           </style>
-          <button class="button button2">Login</button>
+          <button (click)="login()" class="button button2">Login</button>
          <button (click)="reg()" class="button">Register</button>
         
-         <button class="button button3">Reset password</button>
-         <button class="button button4">Clear</button>
+         <!-- <button class="button button3">Reset password</button> -->
+         <button (click)="reloadPage()" class="button button4">Clear</button>
          
         
         

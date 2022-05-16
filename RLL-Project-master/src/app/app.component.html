@@ -113,8 +113,19 @@
         <h3 id="inv">Inventory Management System</h3>
             <div class=" logs">
               
-            <a  routerLink="login" *ngIf="username==undefined || username==''" href="" class="login" > Login</a>
-            <a routerLink="register" *ngIf="username==undefined || username==''" href="" class="register"> Register</a> 
+            <a  routerLink="login" *ngIf="username==undefined || username==''" href="" class="login" > login </a>
+            <a routerLink="register" *ngIf="username==undefined || username==''" href="" class="register"> Register</a>
+            <div class="dropdown">
+              <button class="dropbtn">Menu</button>
+              <div class="dropdown-content">
+                <a routerLink="item" routerLinkActive="Active"> <span>Item</span></a>
+                <a routerLink="purchase" routerLinkActive="Active"><span>Purchase</span></a>
+                    <a routerLink="sale"routerLinkActive="Active"> <span>Sale</span></a>
+                    <a routerLink="customer" routerLinkActive="Active"> <span>Customer</span></a>
+                    
+              
+              </div>
+            </div>
            
         </div>
     </div>
@@ -125,17 +136,7 @@
             <a (click)="logout()" href="" *ngIf="username!=undefined && username!=''"  class="logout_btn">{{username}}, Logout</a>
         </div>
 
-    <div class="dropdown">
-  <button class="dropbtn">Menu</button>
-  <div class="dropdown-content">
-    <a routerLink="item" routerLinkActive="Active"> <span>Item</span></a>
-    <a routerLink="purchase" routerLinkActive="Active"><span>Purchase</span></a>
-        <a routerLink="sale"routerLinkActive="Active"> <span>Sale</span></a>
-        <a routerLink="customer" routerLinkActive="Active"> <span>Customer</span></a>
-        
-  
-  </div>
-</div>
+    
     </header> 
     
    

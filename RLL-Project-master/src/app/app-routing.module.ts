@@ -17,6 +17,7 @@ const routes: Routes = [
     {path:'purchase',component:PurchaseComponent},
     {path:'sale',component:SaleComponent},
     {path:'customer',component:CustomerComponent}
+    
   
 ];
 
